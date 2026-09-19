@@ -192,7 +192,7 @@ pub fn bitcoin_genesis_hash(network: Network) -> bitcoin::BlockHash {
         static ref TESTNET_GENESIS: bitcoin::BlockHash =
             genesis_block(BNetwork::Testnet).block_hash();
         static ref TESTNET4_GENESIS: bitcoin::BlockHash = bitcoin::BlockHash::from_str(
-            "00000000da84f2bafbbc53dee25a72ae507ff4914b867c565be350b0da8bf043"
+            "0000000014751884d22eb2226fa229b34fe6ffef62f595c619b5f76cc0cad29e"
         )
         .unwrap();
         static ref REGTEST_GENESIS: bitcoin::BlockHash =
