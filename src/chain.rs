@@ -184,7 +184,10 @@ pub fn genesis_hash(network: Network) -> BlockHash {
 
 pub fn bitcoin_genesis_hash(network: Network) -> bitcoin::BlockHash {
     lazy_static! {
-        static ref BITCOIN_GENESIS: bitcoin::BlockHash =
+        static ref BITCOIN_GENESIS: bitcoin::BlockHash = bitcoin::BlockHash::from_str(
+            "00000000b312706768c603a5e6cd6b7d1746476b4738b015318abb021ff0fbbd"
+        )
+        .unwrap();
             genesis_block(BNetwork::Bitcoin).block_hash();
         static ref TESTNET_GENESIS: bitcoin::BlockHash =
             genesis_block(BNetwork::Testnet).block_hash();
